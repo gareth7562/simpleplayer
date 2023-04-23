@@ -8,7 +8,7 @@ A simple player to play and browse youtube videos
 
 
 
-to compile install dependencies with
+to run install dependencies with
 
 **npm install** 
 

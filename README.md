@@ -22,7 +22,7 @@ requires mpv binaries and youtube-dlp binaries
 when using youtube-dlp rename to youtube-dl.exe
 and place in the mpv directory
 
-he mpv directory should be in the root of the install folder i.e. SimplePlayer/mpv/
+the mpv directory should be in the root of the install folder i.e. SimplePlayer/mpv/
 
 you can also change the mpv directory from the settings page
 

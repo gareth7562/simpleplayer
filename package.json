@@ -1,8 +1,9 @@
 {
-  "name": "nodegui-starter",
+  "name": "youtube-node-player",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Atul R <atulanand94@gmail.com>",
+  "bin": "dist/index.js",
+  "author": "",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -11,7 +12,21 @@
     "debug": "webpack && qode --inspect ./dist/index.js"
   },
   "dependencies": {
-    "@nodegui/nodegui": "^0.57.1"
+    "@nodegui/nodegui": "^0.59.0",
+    "axios": "^1.3.6",
+    "clipboard-event": "^1.6.0",
+    "escape-path-with-spaces": "^1.0.2",
+    "i": "^0.3.7",
+    "npm": "^9.6.5",
+    "youtube-search-api": "^1.1.1"
+  },
+  "pkg": {
+    "assets": [
+      "./dist/**"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ]
   },
   "devDependencies": {
     "@nodegui/packer": "^1.5.0",

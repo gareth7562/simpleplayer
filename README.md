@@ -5,8 +5,7 @@ A youtube streaming video application
 
 A simple player to play and browse youtube videos
 
-
-
+Requires node to run
 
 to run install dependencies with
 

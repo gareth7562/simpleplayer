@@ -9,7 +9,6 @@ import { eventNames } from 'process';
 import { EventWidget } from '@nodegui/nodegui/dist/lib/core/EventWidget';
 var fs = require('fs')
 
-
 var tempText = "";
 var loading = false;
 

@@ -10,7 +10,7 @@ to compile install dependencies with
 
 then run:
 
-**npm start*
+**npm start**
 
 requires mpv binaries and youtube-dlp binaries
 

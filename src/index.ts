@@ -8,15 +8,6 @@ import { connect } from 'http2';
 import { eventNames } from 'process';
 import { EventWidget } from '@nodegui/nodegui/dist/lib/core/EventWidget';
 var fs = require('fs')
-const clipboardListener = require('clipboard-event');
-
-clipboardListener.startListening();
-
-clipboardListener.on('change', () => {
-  console.log('clipboard changed');
-
-
-})
 
 
 var tempText = "";

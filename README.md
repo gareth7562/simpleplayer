@@ -5,11 +5,12 @@ A simple player to play and browse youtube videos
 
 to compile install dependencies with
 
-## npm install
+npm install 
 
-then run: 
 
-## npm start
+then run:
+
+npm start
 
 requires mpv binaries and youtube-dlp binaries
 

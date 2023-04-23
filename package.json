@@ -14,8 +14,6 @@
   "dependencies": {
     "@nodegui/nodegui": "^0.59.0",
     "axios": "^1.3.6",
-    "clipboard-event": "^1.6.0",
-    "escape-path-with-spaces": "^1.0.2",
     "i": "^0.3.7",
     "npm": "^9.6.5",
     "youtube-search-api": "^1.1.1"

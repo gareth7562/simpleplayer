@@ -27,5 +27,5 @@ you can also change the mpv directory from the settings page
 
 you can download the latest binaries from the releases page with included mpv and youtube-dlp. Only windows binaries atm
 
-
+if you need to build an executable you can use https://github.com/nodegui/packer
 

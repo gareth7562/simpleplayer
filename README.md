@@ -1,5 +1,5 @@
 # simpleplayer
-A youtube streaming video application using node-gui and mpv
+A youtube streaming video application using nodegui and mpv
 
 ![simpleplayer](https://user-images.githubusercontent.com/16856336/233855603-33c32448-c390-4b6a-8494-b5f4909ec39b.png)
 

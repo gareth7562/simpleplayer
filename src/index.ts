@@ -1,14 +1,15 @@
 
 import { QMainWindow, QTabWidget, QWidget, QClipboardMode, QApplication, ButtonRole,
-  QMessageBox, QLabel, FlexLayout, QKeyEvent, QVariant, QPushButton, QPixmap, QLineEdit, QIcon, QListWidget, QListWidgetItem,
+  QMessageBox, QLabel, FlexLayout, QKeyEvent, QVariant, QPushButton, QPixmap, QLineEdit, QIcon, QListWidget, QListWidgetItem, QSettings,
   QSize, SizeAdjustPolicy, ResizeMode, ItemDataRole, QUrl, QBoxLayout, QGridLayout, QFileDialog, FileMode, WidgetEventTypes, Key, 
-  QMenu, QPoint, QClipboard, QCheckBox, QBrush, QColor } from '@nodegui/nodegui';
+  QMenu, QPoint, QClipboard, QCheckBox, QBrush, QColor, QSettingsFormat } from '@nodegui/nodegui';
 import * as defaults from './theme'
 import { connect } from 'http2';
 import { eventNames } from 'process';
 import { EventWidget } from '@nodegui/nodegui/dist/lib/core/EventWidget';
 var fs = require('fs')
 
+const settings = new QSettings("SimplePlayer software", "SimplePlayer");
 var tempText = "";
 var loading = false;
 
@@ -17,11 +18,16 @@ var nextPageToken = 0;
 const axios = require('axios');
 const youtubesearchapi = require("youtube-search-api")
 
-const pathToMpv = "\"" + process.cwd() + '/mpv/mpv.exe' + "\""
+
+settings.sync();
+var pathToMpv = "\"" + process.cwd() + '/mpv/mpv.exe' + "\""
+if(settings.value("mpvdir").toString().length > 0)
+{
+  pathToMpv = settings.value("mpvdir").toString()
+}
 var items = Array<QListWidgetItem>();
 
 const util = require("node:util");
-
 
 
 const execFile = util.promisify(require("node:child_process").execFile);
@@ -221,12 +227,10 @@ videoList.addEventListener('doubleClicked',  () => {
 
   if(!loading)
   {
-    
-
-  const file = videoList.currentItem().toolTip();
-  newHistoryItem();
-  setIsLoading();
-  launchMPV(file, playerPath.text());
+    const file = videoList.currentItem().toolTip();
+    newHistoryItem();
+    setIsLoading();
+    launchMPV(file, playerPath.text());
   
   }
 });
@@ -407,7 +411,10 @@ function findMPV()
   
   if(dialog.exec())
   {
-    playerPath.setText("\"" + dialog.selectedFiles()[0] + "\"");
+    const path = "\"" + dialog.selectedFiles()[0] + "\""
+    playerPath.setText(path);
+    settings.setValue("mpvdir", path);
+    settings.sync();
   }
 }
 

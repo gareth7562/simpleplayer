@@ -25,7 +25,7 @@ the mpv directory should be in the root of the install folder i.e. SimplePlayer/
 
 you can also change the mpv directory from the settings page
 
-you can downloaded the latest binaries from the releases page with included mpv and youtube-dlp. Only windows binaries atm
+you can download the latest binaries from the releases page with included mpv and youtube-dlp. Only windows binaries atm
 
 
 

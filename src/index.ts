@@ -34,6 +34,8 @@ const execFile = util.promisify(require("node:child_process").execFile);
 
 const win = new QMainWindow();
 
+win.setWindowIcon(new QIcon("sp_icon.ico"));
+
 const tabWidget = new QTabWidget();
 win.setWindowTitle("Simple Youtube Player");
 win.setMinimumSize(800, 600);

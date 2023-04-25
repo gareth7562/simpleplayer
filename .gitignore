@@ -4,3 +4,5 @@ mpv/
 deploy/
 *.log
 .vscode
+create_executable.bat
+tools/
